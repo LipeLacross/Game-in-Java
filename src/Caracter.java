@@ -7,7 +7,7 @@ public class Caracter {
         this.energia = energiaPerson;
     }
 
-    void ModifyEnergy(int alteration) {
+        void ModifyEnergy(int alteration) {
         this.energia += alteration;
 
         if (alteration > 0) {
@@ -22,7 +22,7 @@ public class Caracter {
             if (this.nome == "Soldado"){
                 System.out.println("Energia esgotada, você morreu.");
             } else {
-                System.out.println("Energia esgotada, o " + this.nome + " morreu.");
+                System.out.println("Energia esgotada, " + this.nome + " morreu.");
             }
             
         }
