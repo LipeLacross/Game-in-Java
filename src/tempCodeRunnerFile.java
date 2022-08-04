@@ -1,1 +1,1 @@
-"Soldado", 100
+"ESCOLHA INVÁLIDA!!! VOCÊ PERDEU."
