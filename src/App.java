@@ -9,6 +9,8 @@ public class App {
         ChargerReader reader = new ChargerReader();
         //reader.readCharacters("C:/Users/felip/Documents/VScode/(Mini projeto 1) em Java/rsc/characters.txt");
         HashMap<String, Character> characters = reader.readCharacters("/rsc/characters.txt");
+
+        HashMap<String, Chapter> chapters = reader.readChapters("/rsc/chapters.txt", characters, input);
         
         //Personagens
         Character solda = characters.get("Soldado");

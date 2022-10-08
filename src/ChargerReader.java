@@ -17,6 +17,7 @@ public class ChargerReader {
             String characterName = "";
             String escanedLine = "";
             int characterEnergy = 0;
+            
             while (scannerArchiveCharacters.hasNextLine())
             {
                 while(escanedLine.equals("CHARACTER"))
@@ -37,5 +38,46 @@ public class ChargerReader {
             exception.printStackTrace();
         }
         return characters;
+    }
+
+    HashMap<String, Chapter> readChapters(String pathArchiveChapters, HashMap<String, Character> characters, Scanner consoleScanner)
+    {
+        HashMap<String, Chapter> chapters = new HashMap<String, Chapter>();
+        File archiveChapters = new File(pathArchiveChapters);
+
+        try
+        {
+            Scanner scannerArchiveChapters = new Scanner(archiveChapters, "UTF-8");
+
+            String characterName = "";
+            String chapterName = "";
+            String chapterText = "";
+            String escanedLine = "";
+            int energyVariation = 0;
+            
+            while (scannerArchiveChapters.hasNextLine())
+            {
+                while(escanedLine.equals("CHAPTER"))
+                { 
+                    escanedLine = scannerArchiveChapters.nextLine();
+                }
+                escanedLine = scannerArchiveChapters.nextLine();
+                chapterName = scannerArchiveChapters.nextLine();
+                escanedLine = scannerArchiveChapters.nextLine();
+                chapterText = scannerArchiveChapters.nextLine();
+                escanedLine = scannerArchiveChapters.nextLine();
+                characterName = scannerArchiveChapters.nextLine();
+                escanedLine = scannerArchiveChapters.nextLine();
+                energyVariation = Integer.parseInt(scannerArchiveChapters.nextLine());
+                chapters.put(chapterName, new Chapter(chapterText, escanedLine, characters.get(characterName), characters.get(characterName), characters.get(characterName), energyVariation, energyVariation, energyVariation, consoleScanner));
+            }
+
+            scannerArchiveChapters.close();
+        }
+        catch (FileNotFoundException exception)
+        {
+            exception.printStackTrace();
+        }
+        return chapters;
     }
 }

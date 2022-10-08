@@ -36,7 +36,7 @@ public class Chapter{
         }
         catch(NullPointerException exception) 
         {
-			System.out.println("NullPointerException thrown!");
+            
 		}
         //if(this.escolhas.size() > 0) 
         if (this.choices.size() > 0) {
