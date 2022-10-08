@@ -126,7 +126,7 @@ public class App {
         // //System.out.println("===============================CAPÍTULO 3E2E2E1===============================");
         //     new String[] {"rei", "princesa"}
         chapter3E2E2E1.choices.add(new Choice("rei", chapter4E2E2E2E1));
-        chapter3E2E2E1.choices.add(new Choice("princesa", chapter4E2E2E2E2));
+        chapter3E2E2E1.choices.add(new Choice("princesa", chapter4E2E2E2E2));   
         // //System.out.println("===============================CAPÍTULO 3E2E2E2===============================");
         //     null
         // //System.out.println("===============================CAPÍTULO 4E2E2E2E1===============================");
