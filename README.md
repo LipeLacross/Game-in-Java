@@ -1,3 +1,5 @@
+## 🌐 [English Version of README](README_EN.md)
+
 # MiniGame-in-Java
 
 Um jogo text-based com múltiplas escolhas e finais, desenvolvido para o projeto requisitado pelo prof. Lucas Figueiredo.
